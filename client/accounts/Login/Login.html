@@ -1,0 +1,25 @@
+<template name="Login">
+    <style>
+        .login-form{
+            padding: 10%;
+        }
+    </style>
+    <form id="login-form" action="action">
+        <div class="login-form">
+            <legend>登陆</legend>
+            <div class="mui-textfield mui-textfield--float-label">
+                <input type="username" id="login-username" />
+                <label>用户名</label>
+            </div>
+
+            <div class="mui-textfield mui-textfield--float-label">
+                <input type="password" id="login-password" />
+                <label>密码</label>
+            </div>
+
+            <div>
+                <input type="submit" class="mui-btn mui-btn--raised" id="login-button" value="登陆" />
+            </div>
+        </div>
+    </form>
+</template>

@@ -1,0 +1,63 @@
+<template name="Register">
+
+    <style>
+        .signup-form-item{
+            clear: both;
+            margin: 15px 0;
+            zoom: 1;
+        }
+
+        .signup-form-label{
+            display: inline-block;
+            width: 60px;
+            margin-right: 12px;
+            vertical-align: baseline;
+            text-align: right;
+            font-size: 14px;
+
+        }
+
+        .signup-form-wrapper{
+            width: 950px;
+            margin: 0 auto;
+        }
+
+    </style>
+
+    <div class="signup-form-wrapper">
+        <form id="signupform">
+            <h2>注册</h2>
+            <div class="signup-form-item">
+                <label class="signup-form-label" for="signup-username">用户名</label>
+                <input type="text" id="signup-username" placeholder="Username" />
+            </div>
+
+            <div class="signup-form-item">
+                <label class="signup-form-label" for="signup-password">密码</label>
+                <input type="password" id="signup-password" placeholder="Password" />
+            </div>
+
+            <!--
+            <div class="signup-form-item">
+                <label class="signup-form-label" for="signup-name">姓名</label>
+                <input type="text" id="signup-name" placeholder="Full Name" />
+            </div>
+            -->
+
+            <div class="signup-form-item">
+                <label class="signup-form-label" for="signup-email">电子邮箱</label>
+                <input type="text" id="signup-email" placeholder="E-mail Adress" />
+            </div>
+
+            <div class="signup-form-item">
+                <label class="signup-form-label" for="signup-role">职责</label>
+                <label>Founder</label>
+                <input type="radio" id="signup-role" name="role" value="Founder"/>
+                <label>Finder</label>
+                <input type="radio" id="signup-role" name="role" value="Finder"/>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</template>

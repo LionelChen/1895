@@ -1,0 +1,74 @@
+<template name="Demands">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        html,
+        body,
+        input,
+        textarea,
+        buttons {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+        }
+
+
+        /**
+         * Sidebar CSS
+         */
+        #sidebar {
+            background-color: #E57373;
+            padding: 15px;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar {
+                position: fixed;
+                top: 64px;
+                bottom: 0;
+                width: 180px;
+                height: 100%;
+                padding-top: 30px;
+            }
+        }
+
+        /**
+         * Content CSS
+         */
+        @media (min-width: 768px) {
+            #content {
+                margin-left: 180px;
+            }
+        }
+    </style>
+
+    {{#if $.Session.get 'newDemand'}}
+        {{> NewDemand}}
+    {{else}}
+        <button id="newDemandButton" class="mui-btn mui-btn--primary mui-btn--raised">new demand</button>
+    {{/if}}
+
+    {{#if Template.subscriptionsReady }}
+
+        <div id="content" class="mui-container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                        <div class="mui--text-dark-secondary mui--text-body2">RECENT POSTS</div>
+                            {{#each demand}}
+                        <div class="mui-divider"></div>
+                            <br>
+                                {{> Demand}}
+                        {{/each}}
+                    </div>
+                </div>
+        </div>
+
+    {{else}}
+        <p>加载中</p>
+    {{/if}}
+
+</template>
