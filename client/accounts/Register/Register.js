@@ -5,7 +5,7 @@ Template.Register.events({
             username: Register.find("#signup-username").value,
             password: Register.find("#signup-password").value,
             profile: {
-                test:"123"
+                emailAddress:Register.find("#signup-email").value
             }
         },
         function(error) {
