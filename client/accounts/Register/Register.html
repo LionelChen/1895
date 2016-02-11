@@ -42,6 +42,27 @@
                 <input type="email" id="signup-email" required/>
                 <label class="signup-form-label" for="signup-email">电子邮箱</label>
             </div>
+
+            <div class="mui-radio">
+                <label>
+                    <input type="radio"
+                           name="optionsRadios"
+                           id="signup-role-selection"
+                           value="Founder">
+                    Founder
+                </label>
+            </div>
+
+            <div class="mui-radio">
+                <label>
+                    <input type="radio"
+                           name="optionsRadios"
+                           id="signup-role-selection"
+                           value="Finder">
+                    Finder
+                </label>
+            </div>
+
             {{#if errorMessage}}
                 <div class="ui error message">{{errorMessage}}</div>
             {{/if}}
