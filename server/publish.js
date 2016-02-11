@@ -1,6 +1,5 @@
 Meteor.publish('demand', function () {
-    //Meteor._sleepForMs(5000);
-    return Demand.find();
+    return Demand.find({owner:this.userId});
 });
 
 Meteor.publish('users', function() {

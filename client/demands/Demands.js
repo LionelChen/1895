@@ -18,6 +18,6 @@ Template.Demands.helpers({
                 createdAt: -1
             }
         };
-        return Demand.find({}, options);
+        return Demand.find({owner:Meteor.userId()}, options);
     }
 });

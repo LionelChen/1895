@@ -37,7 +37,7 @@ FlowRouter.route('/login', {
     name: 'login',
     action() {
         if(Meteor.userId()){
-            //todo:show already login
+            FlowRouter.go('demands')
         }
         BlazeLayout.render('MainLayout',{main:'Login'});
 
