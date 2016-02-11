@@ -499,7 +499,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455193476475</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="在 Register.html 页面更新了 error message">
+      <created>1455193487856</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1455193487857</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
