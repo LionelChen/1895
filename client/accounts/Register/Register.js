@@ -9,10 +9,13 @@ Template.Register.events({
             username: Register.find("#signup-username").value,
             password: Register.find("#signup-password").value,
             profile: {
-                role:Register.find("#signup-role-selection").value,
-                emailAddress:Register.find("#signup-email").value
+                emailAddress:Register.find("#signup-email").value,
+                roles:Register.find("#signup-role").value
             }
         },
+
+        //Roles.addUsersToRoles(Meteor.userId(), "test", 'default-group'),
+
         function(error) {
             if (error) {
                 Register.lastError.set(error.reason);
@@ -20,6 +23,9 @@ Template.Register.events({
                 Register.lastError.set(null);
             }
         });
+            // Need _id of existing user record so this call must come
+            // after `Accounts.createUser` or `Accounts.onCreate`
+
 
     }
 });

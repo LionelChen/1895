@@ -46,29 +46,41 @@
         }
     </style>
 
-    {{#if $.Session.get 'newDemand'}}
-        {{> NewDemand}}
-    {{else}}
-        <button id="newDemandButton" class="mui-btn mui-btn--primary mui-btn--raised">new demand</button>
-    {{/if}}
+    {{#if isUserFounder}}
 
-    {{#if Template.subscriptionsReady }}
+        <p>Founder</p>
 
-        <div id="content" class="mui-container-fluid">
+        {{#if $.Session.get 'newDemand'}}
+            {{> NewDemand}}
+        {{else}}
+            <button id="newDemandButton" class="mui-btn mui-btn--primary mui-btn--raised">new demand</button>
+        {{/if}}
+
+        {{#if Template.subscriptionsReady }}
+
+            <div id="content" class="mui-container-fluid">
                 <div class="mui-row">
                     <div class="mui-col-sm-10 mui-col-sm-offset-1">
                         <div class="mui--text-dark-secondary mui--text-body2">MY POSTS</div>
-                            {{#each demand}}
-                        <div class="mui-divider"></div>
+                        {{#each demand}}
+                            <div class="mui-divider"></div>
                             <br>
-                                {{> Demand}}
+                            {{> Demand}}
                         {{/each}}
                     </div>
                 </div>
-        </div>
+            </div>
+
+        {{else}}
+            <p>加载中</p>
+        {{/if}}
 
     {{else}}
-        <p>加载中</p>
+
+        <p>Finder</p>
+
     {{/if}}
+
+
 
 </template>

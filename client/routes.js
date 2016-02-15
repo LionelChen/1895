@@ -11,12 +11,14 @@ FlowRouter.route('/',{
 FlowRouter.route('/demands', {
     name: 'demands',
     action() {
-
-        //if(Schema.UserProfile.roles){
+        if(Meteor.userId()){
+            // User is logged in, show demand view
             BlazeLayout.render('MainLayout', {main: 'Demands'});
-        //}
+        }else{
+            // User is not authorized, redirect to home view
+            FlowRouter.go('home');
+        }
         //BlazeLayout.render('MainLayout',{main:'Profile'});
-
     }
 });
 
@@ -24,10 +26,12 @@ FlowRouter.route('/demands', {
 FlowRouter.route('/register', {
     name: 'register',
     action() {
+        // User is logged in, proceed to demand view
         if(Meteor.userId()){
-            //todo:show already login
+            FlowRouter.go('demands')
+        }else{
+            BlazeLayout.render('MainLayout',{main:'Register'});
         }
-        BlazeLayout.render('MainLayout',{main:'Register'});
 
     }
 });

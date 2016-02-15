@@ -43,11 +43,13 @@
                 <label class="signup-form-label" for="signup-email">电子邮箱</label>
             </div>
 
+
+            <!--
+
             <div class="mui-radio">
                 <label>
                     <input type="radio"
                            name="optionsRadios"
-                           id="signup-role-selection"
                            value="Founder">
                     Founder
                 </label>
@@ -57,10 +59,19 @@
                 <label>
                     <input type="radio"
                            name="optionsRadios"
-                           id="signup-role-selection"
                            value="Finder">
                     Finder
                 </label>
+            </div>
+
+            -->
+
+            <div class="mui-select" id="signup-role">
+                <select>
+                    <option>Founder</option>
+                    <label>123</label>
+                    <option>Finder</option>
+                </select>
             </div>
 
             {{#if errorMessage}}
