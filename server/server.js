@@ -2,7 +2,8 @@ Accounts.onCreateUser(function(options, user) {
     if (options.profile){
         user.profile = options.profile;
     }
-    console.log(user.profile);
+
+    FlowRouter.go("demands");
     //let userId = Meteor.userId();
     //Roles.addUsersToRoles( user, [ 'roleOne'] );
     //Roles.addUsersToRoles(user._id, 'test', 'default-group');

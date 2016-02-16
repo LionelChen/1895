@@ -9,8 +9,8 @@ Template.Register.events({
             username: Register.find("#signup-username").value,
             password: Register.find("#signup-password").value,
             profile: {
+                roles:Register.find("#signup-role").value,
                 emailAddress:Register.find("#signup-email").value,
-                roles:Register.find("#signup-role").value
             }
         },
 

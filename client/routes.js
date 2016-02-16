@@ -22,14 +22,26 @@ FlowRouter.route('/demands', {
     }
 });
 
+FlowRouter.route( '/demands/:_id', {
+    subscriptions: function(params, queryParams) {
+        console.log(Meteor.subscribe('Demands', params._id));
+        this.register('Demands', Meteor.subscribe('Demands', params._id));
+
+        BlazeLayout.render('MainLayout',{main:'DemandDetail'});
+    },
+
+        //console.log( params._id );
+
+
+});
 
 FlowRouter.route('/register', {
     name: 'register',
     action() {
         // User is logged in, proceed to demand view
-        if(Meteor.userId()){
-            FlowRouter.go('demands')
-        }else{
+        if(Meteor.loggingIn()){
+            FlowRouter.go('demands');
+        }else if(!Meteor.loggingIn()){
             BlazeLayout.render('MainLayout',{main:'Register'});
         }
 
@@ -41,7 +53,7 @@ FlowRouter.route('/login', {
     name: 'login',
     action() {
         if(Meteor.userId()){
-            FlowRouter.go('demands')
+            FlowRouter.go('demands');
         }
         BlazeLayout.render('MainLayout',{main:'Login'});
 
