@@ -1,7 +1,32 @@
 <template name="DemandDetail">
-        <p>123</p>
-        {{demandDetailTitle}}
-        {{title}}
-        <h2>{{description}}</h2>
-        <h3>{{_id}}</h3>
+
+
+    <style>
+        .mui-panel{
+            margin-top:100px;
+            margin-left:80px;
+            margin-right:80px;
+        }
+
+        .demandDetail{
+            margin-right: 12px;
+            vertical-align: baseline;
+            text-align: left;
+            font-size: 14px;
+        }
+    </style>
+
+
+    <div class="mui-panel">
+        <div class="demandDetail">{{demandDetailTitle}}</div>
+        <div class="demandDetail">{{demandDetailOwnerUsername}}</div>
+        <div class="demandDetail">{{demandDetailDateCreated}}</div>
+        <div class="demandDetail">{{demandDetailDescription}}</div>
+        <div class="demandDetail">{{demandDetailExpectationExperience}}</div>
+        <div class="demandDetail">{{demandDetailExpectationPaid}}</div>
+        <div class="demandDetail">{{demandDetailExpectationLocation}}</div>
+    </div>
+
+
+
 </template>
