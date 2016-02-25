@@ -8,6 +8,19 @@ FlowRouter.route('/',{
     }
 });
 
+FlowRouter.route('/profile', {
+    name: 'profile',
+    action() {
+        if(Meteor.userId()){
+            // User is logged in, show demand view
+            BlazeLayout.render('MainLayout', {main: 'Profile'});
+        }else{
+            // User is not authorized, redirect to home view
+            FlowRouter.go('home');
+        }
+    }
+});
+
 FlowRouter.route('/demands', {
     name: 'demands',
     action() {
@@ -28,7 +41,7 @@ FlowRouter.route( '/demands/:_id', {
         this.register('Demands', Meteor.subscribe('Demands', params._id));
 
         BlazeLayout.render('MainLayout',{main:'DemandDetail'});
-    },
+    }
 
         //console.log( params._id );
 

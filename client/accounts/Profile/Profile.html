@@ -1,3 +1,16 @@
 <template name="Profile">
-    <h1>123</h1>
+    {{userProfileRole}}
+    <form id="profile-update-form">
+        <div class="profile-update-form">
+            <legend>个人信息</legend>
+            <div class="mui-textfield mui-textfield--float-label">
+                <input type="text" id="user-experience" />
+                <label>工作经验</label>
+            </div>
+
+            <div>
+                <input type="submit" class="mui-btn mui-btn--raised" id="profile-update-button" value="Update" />
+            </div>
+        </div>
+    </form>
 </template>

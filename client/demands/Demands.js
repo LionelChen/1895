@@ -7,7 +7,6 @@ Template.Demands.onCreated(function () {
 
 Template.Demands.events({
     'click #newDemandButton': function(){
-        console.log(Meteor.user().profile.roles);
         Session.set('newDemand', true);
     }
 });
