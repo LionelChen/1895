@@ -13,6 +13,11 @@ Template.Profile.helpers({
     }
 });
 
+Template.Profile.events({
+    'click #editExperienceButton': function(){
+        Session.set('editExperience', true);
+    }
+});
 
 Template.Profile.events({
 
@@ -22,5 +27,21 @@ Template.Profile.events({
         // Trim and validate your fields here....
 
         Meteor.users.update({_id:Meteor.userId()},{$set:{'profile.experience':userExperience}});
+    }
+});
+
+Template.Profile.helpers({
+    isUserFilledExperience:function(){
+        if(Meteor.users.findOne().profile.experience){
+            return true;
+        }else{
+            return false;
+        }
+    }
+});
+
+Template.Profile.helpers({
+    userProfileExperience:function(){
+        return Meteor.users.findOne().profile.experience;
     }
 });

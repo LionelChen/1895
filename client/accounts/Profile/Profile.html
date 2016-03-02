@@ -1,16 +1,43 @@
 <template name="Profile">
     {{userProfileRole}}
-    <form id="profile-update-form">
-        <div class="profile-update-form">
-            <legend>个人信息</legend>
-            <div class="mui-textfield mui-textfield--float-label">
-                <input type="text" id="user-experience" />
-                <label>工作经验</label>
-            </div>
 
-            <div>
-                <input type="submit" class="mui-btn mui-btn--raised" id="profile-update-button" value="Update" />
+    {{#if isUserFilledExperience}}
+
+        <div class="mui-divider"></div>
+        <div>
+            {{#if $.Session.get 'editExperience'}}
+                {{> EditExperience}}
+            {{else}}
+                <div>经验:</div>
+                <p>{{userProfileExperience}}</p>
+                <button id="editExperienceButton" class="mui-btn mui-btn--primary mui-btn--raised">Edit</button>
+            {{/if}}        </div>
+        <div class="mui-divider"></div>
+
+    {{else}}
+        <form id="profile-update-form">
+            <div class="profile-update-form">
+                <legend>个人信息</legend>
+                <div class="mui-textfield mui-textfield--float-label">
+                    <input type="text" id="user-experience" />
+                    <label>工作经验</label>
+                </div>
+
+                <div>
+                    <input type="submit" class="mui-btn mui-btn--raised" id="profile-update-button" value="Update" />
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+
+    {{/if}}
+
+
+</template>
+
+
+<template name="EditExperience">
+    <div class="mui-textfield mui-textfield--float-label">
+        <input type="text">
+        <label>经验</label>
+    </div>
 </template>
