@@ -11,7 +11,8 @@
                 <div>经验:</div>
                 <p>{{userProfileExperience}}</p>
                 <button id="editExperienceButton" class="mui-btn mui-btn--primary mui-btn--raised">Edit</button>
-            {{/if}}        </div>
+            {{/if}}
+        </div>
         <div class="mui-divider"></div>
 
     {{else}}
@@ -37,7 +38,10 @@
 
 <template name="EditExperience">
     <div class="mui-textfield mui-textfield--float-label">
-        <input type="text">
+        <input id="update-user-experience" type="text">
         <label>经验</label>
+    </div>
+    <div>
+        <button id="updateExperienceButton" class="mui-btn mui-btn--primary mui-btn--raised">Update</button>
     </div>
 </template>

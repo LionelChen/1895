@@ -30,6 +30,18 @@ Template.Profile.events({
     }
 });
 
+Template.EditExperience.events({
+
+    "click #updateExperienceButton" : function(event, template){
+        // retrieve the input field values
+        userExperience = template.find('#update-user-experience').value;
+        // Trim and validate your fields here....
+        Meteor.users.update({_id:Meteor.userId()},{$set:{'profile.experience':userExperience}});
+        Session.set('editExperience', false);
+    }
+});
+
+
 Template.Profile.helpers({
     isUserFilledExperience:function(){
         if(Meteor.users.findOne().profile.experience){
