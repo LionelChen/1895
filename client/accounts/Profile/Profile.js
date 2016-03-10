@@ -63,6 +63,9 @@ Template.Profile.helpers({
 
 Template.upload.events({
 
+
+
+    //Todo 添加裁剪插件
     'change .myFileInput': function(event, template) {
         FS.Utility.eachFile(event, function(file) {
             console.log(file);
@@ -77,6 +80,7 @@ Template.upload.events({
                   "profile.avatarAddress": "avatar/images/" + fileObj._id+"-"+fileObj.name()
                 };
                     Meteor.users.update(userId, {$set: imagesURL});
+                    FlowRouter.go("profile")
                 }
             });
         });
