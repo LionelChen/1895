@@ -21,6 +21,18 @@ FlowRouter.route('/profile', {
     }
 });
 
+FlowRouter.route('/user',{
+   name:'user',
+    action(){
+        if(Meteor.userId()){
+            //Todo implement user page
+        }else{
+            FlowRouter.go('home');
+        }
+    }
+
+});
+
 FlowRouter.route('/demands', {
     name: 'demands',
     action() {

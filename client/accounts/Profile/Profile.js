@@ -55,5 +55,31 @@ Template.Profile.helpers({
 Template.Profile.helpers({
     userProfileExperience:function(){
         return Meteor.users.findOne().profile.experience;
+    },
+    userAvatarUrl:function(){
+        return "http://1895.oss-cn-shenzhen.aliyuncs.com/"+Meteor.users.findOne().profile.avatarAddress;
     }
+});
+
+Template.upload.events({
+
+    'change .myFileInput': function(event, template) {
+        FS.Utility.eachFile(event, function(file) {
+            console.log(file);
+            Images.insert(file, function (err, fileObj) {
+                if (err){
+                    // handle error
+                    console.log(err);
+                } else {
+                    // handle success depending what you need to do
+                    var userId = Meteor.userId();
+                    var imagesURL = {
+                  "profile.avatarAddress": "avatar/images/" + fileObj._id+"-"+fileObj.name()
+                };
+                    Meteor.users.update(userId, {$set: imagesURL});
+                }
+            });
+        });
+    },
+
 });

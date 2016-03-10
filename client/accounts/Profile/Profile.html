@@ -1,6 +1,12 @@
 <template name="Profile">
     {{userProfileRole}}
 
+    {{> upload}}
+    <div>
+        <img src={{userAvatarUrl}}>
+    </div>
+    <p>{{userAvatarUrl}}</p>
+
     {{#if isUserFilledExperience}}
 
         <div class="mui-divider"></div>
@@ -44,4 +50,8 @@
     <div>
         <button id="updateExperienceButton" class="mui-btn mui-btn--primary mui-btn--raised">Update</button>
     </div>
+</template>
+
+<template name="upload">
+    <input type="file" name="..." class="myFileInput">
 </template>

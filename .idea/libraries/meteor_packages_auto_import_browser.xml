@@ -190,6 +190,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/tel/tel.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/url/url.js" />
         <item url="file://$USER_HOME$/.meteor/packages/rate-limit/1.0.0/web.browser/rate-limit.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/cfs_filesystem/0.1.2/web.browser/packages/cfs:filesystem.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/date/date.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/file/file.js" />
         <item url="file://$USER_HOME$/.meteor/packages/service-configuration/1.0.5/web.browser/service_configuration_common.js" />
@@ -479,6 +480,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/tel/tel.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/url/url.js" />
       <root url="file://$USER_HOME$/.meteor/packages/rate-limit/1.0.0/web.browser/rate-limit.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/cfs_filesystem/0.1.2/web.browser/packages/cfs:filesystem.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/date/date.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/file/file.js" />
       <root url="file://$USER_HOME$/.meteor/packages/service-configuration/1.0.5/web.browser/service_configuration_common.js" />

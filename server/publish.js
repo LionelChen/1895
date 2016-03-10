@@ -2,6 +2,9 @@ Meteor.publish('demand', function () {
     return Demand.find({owner:this.userId});
 });
 
+Meteor.publish("images", function(){
+    return Images.find();
+});
 
 //DO NOT PUBLISH ALL USERS IN PRODUCTION!!!!!!
 

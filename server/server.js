@@ -11,3 +11,18 @@ Accounts.onCreateUser(function(options, user) {
     //Meteor.users.update(Meteor.userId(), {$set: {profile:{UserProfile:{test:"123"}}}});
     //Meteor.users.update(Meteor.userId(), {$set: {profile:{test:"123"}}});
 });
+
+Images.allow({
+    insert: function(){
+        return true;
+    },
+    update: function(){
+        return true;
+    },
+    remove: function(){
+        return true;
+    },
+    download: function(){
+        return true;
+    }
+});
