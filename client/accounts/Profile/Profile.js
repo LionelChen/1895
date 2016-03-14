@@ -5,8 +5,6 @@ Template.Profile.onCreated(function () {
     });
 });
 
-
-
 Template.Profile.helpers({
     userProfileRole: function () {
         return Meteor.users.findOne().profile.roles;
@@ -41,7 +39,6 @@ Template.EditExperience.events({
     }
 });
 
-
 Template.Profile.helpers({
     isUserFilledExperience:function(){
         if(Meteor.users.findOne().profile.experience){
@@ -62,9 +59,6 @@ Template.Profile.helpers({
 });
 
 Template.upload.events({
-
-
-
     //Todo 添加裁剪插件
     'change .myFileInput': function(event, template) {
         FS.Utility.eachFile(event, function(file) {
@@ -80,7 +74,7 @@ Template.upload.events({
                   "profile.avatarAddress": "avatar/images/" + fileObj._id+"-"+fileObj.name()
                 };
                     Meteor.users.update(userId, {$set: imagesURL});
-                    FlowRouter.go("profile")
+                    FlowRouter.go("profile");
                 }
             });
         });

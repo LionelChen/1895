@@ -44,5 +44,8 @@ msavin:jetsetter
 
 cfs:standard-packages
 iyyang:cfs-aliyun
-
 cfs:filesystem
+
+jonblum:jquery-cropper
+
+#alethes:pages

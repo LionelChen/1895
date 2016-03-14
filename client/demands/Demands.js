@@ -22,6 +22,7 @@ Template.Demands.helpers({
     }
 });
 
+//Is user a founder
 Template.Demands.helpers({
     isUserFounder:function(){
         if(Meteor.users.findOne().profile.roles == "Founder"){

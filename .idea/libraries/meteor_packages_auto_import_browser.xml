@@ -201,6 +201,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/email/email.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/image/image.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/month/month.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/jonblum_jquery-cropper/2.3.0/web.browser/cropper/dist/cropper.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/jonblum_jquery-cropper/2.3.0/web.browser/cropper/dist/cropper.css" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/radio/radio.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/range/range.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/reset/reset.js" />
@@ -491,6 +493,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/email/email.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/image/image.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/month/month.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/jonblum_jquery-cropper/2.3.0/web.browser/cropper/dist/cropper.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/jonblum_jquery-cropper/2.3.0/web.browser/cropper/dist/cropper.css" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/radio/radio.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/range/range.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/reset/reset.js" />
