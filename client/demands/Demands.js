@@ -32,3 +32,20 @@ Template.Demands.helpers({
         }
     }
 });
+
+//Is user a finder
+Template.Demands.helpers({
+    isUserFinder:function(){
+        if(Meteor.users.findOne().profile.roles == "Finder"){
+            return true;
+        }else{
+            return false;
+        }
+    }
+});
+
+Template.Demands.helpers({
+    matachedDemand:function(){
+        return Demand.find()
+    }
+});

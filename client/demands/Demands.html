@@ -9,8 +9,7 @@
         html,
         body,
         input,
-        textarea,
-        buttons {
+        textarea{
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -48,8 +47,6 @@
 
     {{#if isUserFounder}}
 
-        <p>Founder</p>
-
         {{#if $.Session.get 'newDemand'}}
             {{> NewDemand}}
         {{else}}
@@ -71,16 +68,37 @@
                 </div>
             </div>
 
+            {{> PageNavBar}}
+
         {{else}}
             <p>加载中</p>
         {{/if}}
 
-    {{else}}
-
-        <p>Finder</p>
-
     {{/if}}
 
-    {{> PageNavBar}}
+
+    {{#if isUserFinder}}
+
+        {{#if Template.subscriptionsReady }}
+
+            <div id="content" class="mui-container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                        <div class="mui--text-dark-secondary mui--text-body2">需求</div>
+                        {{#each matachedDemand}}
+                            <div class="mui-divider"></div>
+                            <br>
+                            {{> Demand}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        {{else}}
+            <p>加载中</p>
+        {{/if}}
+
+
+    {{/if}}
 
 </template>

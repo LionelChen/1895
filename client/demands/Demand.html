@@ -1,121 +1,11 @@
 <template name="Demand">
 
     <div class="mui-panel">
-        <div class="empty-norm"></div>
-        <div class="empty-norm"></div>
-        <div class="empty-norm visible-xs"></div>
-
-        <div class="job-content col-sm-8">
-            <div class="job-head">
-                <div class="job-title no-padding-left">
-                    <a href="/jobs/1341">
-                        项目开发
-                    </a>      </div>
-
-                <div class="clearfix visible-xs"></div>
-                <div class="empty-line visible-xs"></div>
-            </div>
-
-            <div class="clearfix"></div>
-            <div class="empty-line"></div>
-            <div>
-                地址：
-                <span>杭州</span>
-                <span>西湖</span>
-                <span>文二、文三路</span>
-            </div>
-            <div class="empty-line"></div>
-
-            <div class="jobs-index job-description limit-line-5" data-uid="1341">
-                <section><p>目前网站是用 Nodejs 开发的，所以需要有 Nodejs 经验的工程师，网站是一个金融教育相关网站，目前要做一个交易模块和个人中心相关模块，具体需求和开发时间到时候需要具体沟通，需要兼职人员时间较为充足。在杭州西湖区。</p></section>
-            </div>
-
-            <div class="empty-line"></div>
-
-            <div class="no-padding-left">
-                <div class="user-tiny-info">
-                    <div class="no-padding-left inline-block pull-left">
-                        <a href="/employers/39384">
-                            <img class="small-avatar-radius" src="/upload/user/avatar/37260/small_ab896a9f7f35541b30e9f95f01a78b68.png" alt="Small ab896a9f7f35541b30e9f95f01a78b68">
-                        </a>        </div>
-
-                    <div class="jobs-index job-to-username inline-block pull-left">
-                        <a href="/employers/39384">bieshawoa`4</a>
-
-                        <div class="placeholder-hint inline-block">
-                            &nbsp;&nbsp;大约 20 小时前
-                        </div>
-
-                        <div class="empty-small-line"></div>
-
-                        <div class="placeholder-hint">
-                            公司暂未填写
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="col-sm-1"></div>
-
-        <div class="job-sidebar col-sm-3">
-            <div class="empty-line visible-xs"></div>
-
-            <div class="job-how_money link-blue">
-                预估 800元 / 8小时
-            </div>
-            <div class="clearfix"></div>
-
-            <div class="empty-line"></div>
-
-            <div class="job-sidebar-info">
-                <span>预估工时：</span>
-                <span>10天</span>
-            </div>
-            <div class="job-sidebar-info">
-                <span>预估金额：</span>
-
-      <span>
-        8000 元
-      </span>
-            </div>
-
-            <div class="job-sidebar-info">
-                <span>期望开始工作日期：</span>
-
-      <span>
-        2016-03-16
-      </span>
-            </div>
-
-            <div class="empty-line"></div>
-            <div class="empty-line"></div>
-
-            <div id="apply_job_1341" data-btn-class="btn btn-hundred">
-                <!-- 未登录 -->
-                <!-- 自己发布的 -->
-                <a class="btn btn-default btn-hundred" href="/consultants/apply?want_apply_job=true">投递职位</a>
-                <!-- 已经投递 -->
-
-
-            </div>
-            <div class="empty-tiny-line"></div>
-        </div>
-
-        <div class="clearfix"></div>
-        <div class="empty-line"></div>
-        <div class="empty-small-line"></div>
-    </div>
-
-    <div class="mui-panel">
         <div>
             <h3><a href=/demands/{{_id}}>{{title}}</a></h3>
         </div>
 
-        <div class="mui-col-md-5">
+        <div class="mui-col-md-7">
             {{description}}
         </div>
 
@@ -123,8 +13,18 @@
             <hr style="width:2px;height:100px; ">
         </div>
 
-        <div class="mui-col-md-4">
-            <h2>123</h2>
+        <div class="mui-col-md-2">
+            <div>
+                拍摄地点: {{expectation.location}}
+            </div>
+
+            <div>
+                {{#if expectation.paid }}
+                    有偿
+                {{else}}
+                    无偿
+                {{/if}}
+            </div>
         </div>
     </div>
 </template>
