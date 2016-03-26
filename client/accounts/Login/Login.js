@@ -1,10 +1,14 @@
+Template.Login.onCreated(function() {
+    this.lastError = new ReactiveVar(null);
+});
+
 Template.Login.events({
 
-    "submit #login-form" : function(e, t){
-        e.preventDefault();
+    "submit #login-form" : function(event, template){
+        event.preventDefault();
         // retrieve the input field values
-        username = t.find('#login-username').value;
-        password = t.find('#login-password').value;
+        username = template.find('#login-username').value;
+        password = template.find('#login-password').value;
 
         // Trim and validate your fields here....
 
@@ -12,17 +16,21 @@ Template.Login.events({
         // Meteor.loginWithPassword() function.
         Meteor.loginWithPassword(username, password, function(err) {
             if (err) {
-                console.log(err)
-                // The user might not have been found, or their passwword
-                // could be incorrect. Inform the user that their
-                // login attempt has failed.
+                template.lastError.set(err.reason);
             }
             else {
                 console.log("login success")
             }
+
             // The user has been logged in.
 
         });
         return false;
+    }
+});
+
+Template.Login.helpers({
+    errorMessage: function() {
+        return Template.instance().lastError.get();
     }
 });

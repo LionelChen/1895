@@ -225,6 +225,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-multiple/select-multiple.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-checkbox/boolean-checkbox.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/cunneen_mailgun/0.9.1/web.browser/packages/cunneen:mailgun.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
         <item url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />
@@ -517,6 +518,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-multiple/select-multiple.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-checkbox/boolean-checkbox.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/cunneen_mailgun/0.9.1/web.browser/packages/cunneen:mailgun.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
       <root url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />

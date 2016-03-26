@@ -46,6 +46,6 @@ Template.Demands.helpers({
 
 Template.Demands.helpers({
     matachedDemand:function(){
-        return Demand.find()
+        return Demand.find();
     }
 });

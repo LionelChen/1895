@@ -17,9 +17,17 @@
                 <label>密码</label>
             </div>
 
+            {{#if errorMessage}}
+                <div class="ui error message" style=color:#F00>
+                    {{errorMessage}}
+                </div>
+            {{/if}}
+
             <div>
                 <input type="submit" class="mui-btn mui-btn--raised" id="login-button" value="登陆" />
             </div>
         </div>
     </form>
+
+
 </template>
