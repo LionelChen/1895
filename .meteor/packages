@@ -49,5 +49,10 @@ cfs:filesystem
 jonblum:jquery-cropper
 
 #alethes:pages
+
 email
 cunneen:mailgun
+
+meteorhacks:npm
+
+npm-container

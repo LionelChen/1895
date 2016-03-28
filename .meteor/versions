@@ -79,6 +79,8 @@ matb33:bootstrap-glyphicons@10.0.0
 mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 meteortoys:toykit@2.2.1
 minifiers@1.1.7
 minimongo@1.0.10
@@ -91,6 +93,7 @@ mongo-livedata@1.0.9
 msavin:jetsetter@1.5.2
 msavin:mongol@1.6.2
 npm-bcrypt@0.7.8_2
+npm-container@1.2.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4

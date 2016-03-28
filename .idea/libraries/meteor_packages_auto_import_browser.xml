@@ -231,6 +231,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />
         <item url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/srp.js" />
         <item url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/biginteger.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/meteorhacks_async/1.0.0/web.browser/packages/meteorhacks:async.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/meteorhacks_npm/1.5.0/web.browser/packages/meteorhacks_npm.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/quickForm/quickForm.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/afObjectField/afObjectField.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/quickForm/quickForm.js" />
@@ -524,6 +526,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />
       <root url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/srp.js" />
       <root url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/biginteger.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/meteorhacks_async/1.0.0/web.browser/packages/meteorhacks:async.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/meteorhacks_npm/1.5.0/web.browser/packages/meteorhacks_npm.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/quickForm/quickForm.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain/components/afObjectField/afObjectField.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3/components/quickForm/quickForm.js" />
