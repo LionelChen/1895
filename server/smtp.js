@@ -7,10 +7,10 @@ Meteor.startup(function(){
 
 // In your server code: define a method that the client can call
 
-    Meteor.methods({
-        sendEmail: function (mailFields) {
-            console.log("about to send email...");
-            check([mailFields.to, mailFields.from, mailFields.subject, mailFields.text], [String]);
+Meteor.methods({
+    sendEmail: function (mailFields) {
+        console.log("about to send email...");
+        check([mailFields.to, mailFields.from, mailFields.subject, mailFields.text], [String]);
 
             // Let other method calls from the same client start running,
             // without waiting for the email sending to complete.
@@ -20,8 +20,21 @@ Meteor.startup(function(){
                 to: mailFields.to,
                 from: mailFields.from,
                 subject: mailFields.subject,
-                text: mailFields.text,
+                text: mailFields.tex
             });
             console.log("email sent!");
+    },
+
+    forgotPasswordM: function (userEmail) {
+        text =['abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','~!@#$%^&*()_+";",./?<>'];
+        rand = function(min, max){return Math.floor(Math.max(min, Math.random() * (max+1)));};
+        var len = 20;
+        var pw = '';
+        for(i=0; i<len; ++i){
+            var strpos = rand(0, 3);
+            pw += text[strpos].charAt(rand(0, text[strpos].length));
+        }
+
+        return pw;
     }
 });
