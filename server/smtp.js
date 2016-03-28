@@ -25,7 +25,7 @@ Meteor.methods({
             console.log("email sent!");
     },
 
-    forgotPasswordM: function (userEmail) {
+    generateForgotPasswordKey: function (userEmail) {
         text =['abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','~!@#$%^&*()_+";",./?<>'];
         rand = function(min, max){return Math.floor(Math.max(min, Math.random() * (max+1)));};
         var len = 20;
@@ -34,7 +34,16 @@ Meteor.methods({
             var strpos = rand(0, 3);
             pw += text[strpos].charAt(rand(0, text[strpos].length));
         }
+        let UserId = Meteor.users.findOne({'profile.emailAddress':userEmail})._id;
+        console.log(UserId);
+        Meteor.users.update({_id:UserId}, {$set: {'profile.lastForgotPasswordKey':pw}});
+        Meteor.call('sendEmail',{
+            to: userEmail,
+            from: 'no-reply@1895.com',
+            subject: 'Help, I forgot my password!',
+            text: pw
+        });
+        return "E-mail sent!"
 
-        return pw;
     }
 });

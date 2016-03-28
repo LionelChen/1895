@@ -2,11 +2,8 @@ Template.retrievepassword.events({
     'click #submit-button': function(event, template){
         event.preventDefault();
         userEmail = template.find('#user-email').value;
-        let UserId = Meteor.users.findOne({'profile.emailAddress':userEmail});
-        console.log(UserId);
 
-
-        Meteor.call("forgotPasswordM", userEmail, function(error, result){
+        Meteor.call("generateForgotPasswordKey", userEmail, function(error, result){
             if(error){
                 console.log(error.reason);
                 return;
@@ -14,14 +11,6 @@ Template.retrievepassword.events({
             // do something with result
             console.log(result);
         });
-
-        if(UserId){
-            //Meteor.users.update({_id:UserId}, {$set: {'profile.lastForgotPasswordKey':randPassword()}});
-            console.log()
-        }else{
-            console.log("not exist");
-        }
-
 
         /*
         Meteor.call('sendEmail',{
