@@ -20,7 +20,7 @@ Meteor.methods({
                 to: mailFields.to,
                 from: mailFields.from,
                 subject: mailFields.subject,
-                text: mailFields.tex
+                text: mailFields.text
             });
             console.log("email sent!");
     },
