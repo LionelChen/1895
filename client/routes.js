@@ -30,17 +30,25 @@ FlowRouter.route('/user',{
             FlowRouter.go('home');
         }
     }
-
 });
 
 FlowRouter.route('/retrievepassword',{
     name:'retrievepassword',
     action(){
-
         BlazeLayout.render('MainLayout', {main: 'retrievepassword'})
     }
 
 });
+
+FlowRouter.route( '/retrievepassword/:userId/:resetPasswordKey', {
+    name:'resetpassword',
+    action: function(params) {
+
+        BlazeLayout.render('MainLayout',{main:'ResetPassword'});
+    }
+
+});
+
 
 FlowRouter.route('/demands', {
     name: 'demands',
@@ -63,9 +71,6 @@ FlowRouter.route( '/demands/:_id', {
 
         BlazeLayout.render('MainLayout',{main:'DemandDetail'});
     }
-
-        //console.log( params._id );
-
 
 });
 
@@ -102,3 +107,4 @@ FlowRouter.route('/logout', {
 
     }
 });
+

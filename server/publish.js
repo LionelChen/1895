@@ -2,8 +2,7 @@ Meteor.publish('demand', function () {
     if(Meteor.users.findOne().profile.roles=="Founder"){
         return Demand.find({owner:this.userId});
     }else if(Meteor.users.findOne().profile.roles=="Finder"){
-        console.log("user is finder");
-        finderExperience = this.users.findOne().profile.experience;
+        finderExperience = Meteor.users.findOne().profile.experience;
         return Demand.find({'expectation.experience':finderExperience});
         //return Demand.find({'expectation.experience':finderExperience});
     }

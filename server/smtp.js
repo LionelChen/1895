@@ -26,24 +26,35 @@ Meteor.methods({
     },
 
     generateForgotPasswordKey: function (userEmail) {
-        text =['abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890','~!@#$%^&*()_+";",./?<>'];
+        text =['abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','1234567890'];
         rand = function(min, max){return Math.floor(Math.max(min, Math.random() * (max+1)));};
         var len = 20;
         var pw = '';
         for(i=0; i<len; ++i){
-            var strpos = rand(0, 3);
+            var strpos = rand(0, 2);
             pw += text[strpos].charAt(rand(0, text[strpos].length));
         }
         let UserId = Meteor.users.findOne({'profile.emailAddress':userEmail})._id;
-        console.log(UserId);
         Meteor.users.update({_id:UserId}, {$set: {'profile.lastForgotPasswordKey':pw}});
         Meteor.call('sendEmail',{
             to: userEmail,
             from: 'no-reply@1895.com',
             subject: 'Help, I forgot my password!',
-            text: pw
+            text: "http://localhost:3000/retrievepassword/"+UserId+"/"+pw
         });
         return "E-mail sent!"
+
+    },
+
+    validateForgotPasswordKeyAndResetPassword: function(InformationPassed){
+        //InformationPassed:{userId,ForgotPasswordKey,newPassword}
+        if(InformationPassed[1]==Meteor.users.findOne({'_id':InformationPassed[0]}).profile.lastForgotPasswordKey){
+            Accounts.setPassword(InformationPassed[0],InformationPassed[2]);
+            Meteor.users.update({_id:InformationPassed[0]}, {$set: {'profile.lastForgotPasswordKey':''}});
+            return true
+        }else{
+            return false
+        }
 
     }
 });
